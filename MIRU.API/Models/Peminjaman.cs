@@ -1,28 +1,30 @@
 using System;
+using System.ComponentModel.DataAnnotations; 
 
 namespace MIRU.API.Models
 {
     public class Peminjaman
     {
-        // Ini adalah Primary Key (ID unik untuk setiap data)
         public int Id { get; set; }
 
-        // Siapa yang meminjam?
+        [Required(ErrorMessage = "Nama Peminjam wajib diisi")]
+        [StringLength(100, ErrorMessage = "Nama Peminjam maksimal 100 karakter")]
         public string NamaPeminjam { get; set; } = string.Empty;
 
-        // Ruangan apa yang dipinjam?
+        [Required(ErrorMessage = "Nama Ruangan wajib diisi")]
+        [StringLength(50, ErrorMessage = "Nama Ruangan maksimal 50 karakter")]
         public string NamaRuangan { get; set; } = string.Empty;
 
-        // Kapan mulai?
+        [Required(ErrorMessage = "Tanggal Mulai wajib diisi")]
         public DateTime TanggalMulai { get; set; }
 
-        // Kapan selesai?
+        [Required(ErrorMessage = "Tanggal Selesai wajib diisi")]
         public DateTime TanggalSelesai { get; set; }
 
-        // Buat acara apa?
+        [Required(ErrorMessage = "Keperluan wajib diisi")]
         public string Keperluan { get; set; } = string.Empty;
 
-        // Statusnya gimana? (Menunggu, Disetujui, Ditolak)
+        // Status tidak perlu Required karena default-nya "Menunggu"
         public string Status { get; set; } = "Menunggu";
     }
 }
