@@ -12,6 +12,14 @@ dan project ini mematuhi [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - Dokumentasi `README.md` dengan panduan instalasi.
 - Dokumentasi `CHANGELOG.md` untuk riwayat versi.
 
+## [1.0.1] - 2026-02-16
+
+### Added
+
+- Fitur Data Seeder: Otomatis mengisi data dummy saat aplikasi pertama kali dijalankan.
+- Validasi Input: Mencegah data kosong atau tidak valid masuk ke database.
+- Dokumentasi lengkap (README & CHANGELOG).
+
 ## [1.0.0] - 2026-02-16
 
 ### Added
