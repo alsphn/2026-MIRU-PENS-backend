@@ -12,6 +12,12 @@ dan project ini mematuhi [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - Dokumentasi `README.md` dengan panduan instalasi.
 - Dokumentasi `CHANGELOG.md` untuk riwayat versi.
 
+## [1.0.2] - 2026-02-17
+
+### Added
+
+- [Fix] Enable CORS for Frontend communication.
+
 ## [1.0.1] - 2026-02-16
 
 ### Added

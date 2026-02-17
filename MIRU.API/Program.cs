@@ -3,6 +3,18 @@ using MIRU.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// DAFTARKAN SERVICE CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // Alamat React kamu
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // 1. Add services to the container.
 builder.Services.AddControllers();
 
@@ -41,6 +53,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
